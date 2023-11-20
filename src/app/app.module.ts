@@ -10,6 +10,7 @@ import { CursoComponent } from './auth/page/curso/curso.component';
 import { DocenteComponent } from './auth/page/docente/docente.component';
 import { PerfilDocenteComponent } from './auth/page/perfil-docente/perfil-docente.component';
 import { TareaComponent } from './auth/page/tarea/tarea.component';
+import { EstudianteComponent } from './estudiante/estudiante.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TareaComponent } from './auth/page/tarea/tarea.component';
     CursoComponent,
     DocenteComponent,
     PerfilDocenteComponent,
-    TareaComponent
+    TareaComponent,
+    EstudianteComponent
   ],
   imports: [
     BrowserModule,
