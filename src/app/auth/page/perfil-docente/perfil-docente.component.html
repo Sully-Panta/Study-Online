@@ -1,0 +1,57 @@
+<h2>PERFIL DEL PROFESOR</h2>
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+          <!-- parte 1 -->
+        <mat-panel-title>
+          INFORMACION PERSONAL
+        </mat-panel-title>
+        <mat-panel-description>
+          DATOS ESENCIALES DEL PROFESOR
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class =cuerpo>
+      <div class =datos>
+      <div> Nombre: Juan Hazael </div>
+      <div> Apellidos: Apellido Apellido</div>
+      <div> Edad: 23</div>
+      <div> Telefono: 0987654321</div>
+      <div> Correo: ejemplocorreo.correo.com</div>
+      <div> Github: github.com/profesor_ejemplo</div>
+      <div> Fecha Nacimiento: 13 de Mayo 2000</div>
+      </div>
+      <div class =imagen>
+        <div class="imagen-container">
+          <img *ngIf="imagenUrl" [src]="imagenUrl" alt="Foto de perfil">
+        </div>
+        <input type="file" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+    </div>
+    </mat-expansion-panel>
+        <!-- parte 2 -->
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        ¿Quien es tu profesor?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Profesor es muchas cosas: desarrollador de software, profesor, creador de contenido y por encima 
+        de todo un loco de la tecnología y enamorado de todo lo que hace. 
+        Durante estos más de 20 años de profesión ha sido muchos los puestos de trabajo que ha tenido la empresa privada, 
+        permitiéndole tener una perspectiva muy amplia de todos los sectores.</p>
+    </mat-expansion-panel>
+        <!-- parte 3 -->
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Lo que dicen los estudiantes del profesor
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Estudiante: Juan Lopez</p>
+      <p>Nota: 5/5</p>
+      <p>Descripcion: Es genial</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- perfil.component.html -->
