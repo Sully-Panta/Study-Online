@@ -9,3 +9,81 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permite que los cuadros se envuelvan a la siguiente línea si no caben en la pantalla */
+  }
+  
+  .curso-card {
+    margin: 10px; /* Añade espacio entre los cuadros */
+  }
+  
+  .mat-card {
+    background-color: #8B0000; /* Color rojo oscuro */
+    color: white; /* Color del texto en los cuadros */
+    transition: box-shadow 0.3s, background-color 0.3s; /* Transición de sombra y color de fondo al pasar el ratón */
+    border-radius: 8px; /* Esquinas redondeadas */
+    width: 200px; /* Ancho fijo de los cuadros (ajusta según sea necesario) */
+  
+  
+  
+    .mat-card-title {
+      background-color: #B22222; /* Color rojo más claro para el encabezado del cuadro */
+      padding: 8px;
+      border-radius: 4px 4px 0 0;
+      font-family: 'Arial', sans-serif; /* Tipo de letra elegante */
+    }
+  
+    .mat-card-content {
+      padding: 16px;
+      font-family: 'Arial', sans-serif; /* Tipo de letra elegante */
+    }
+  }
+  /* styles.css o styles.scss */
+  
+  .mat-card {
+    /* ... (resto de estilos) */
+    position: relative; /* Asegura que la posición relativa se aplica a todos los mat-cards */
+  }
+  
+  .horario-card {
+    background-image: url('/src/imagenes/8091455.gif'); /* Ruta de la imagen de fondo para los horarios */
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Altura fija para los cuadros de horarios (ajusta según sea necesario) */
+    color: black; /* Color del texto en los cuadros de horarios */
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden; /* Asegura que la imagen de fondo no se desborde */
+  }
+  
+  /* Agrega imágenes de fondo a los cuadros de horarios */
+  .horario-card:nth-child(odd) {
+    background-image: url('/src/imagenes/8091455.gif');
+  }
+  
+  .horario-card:nth-child(even) {
+    background-image: url('/src/imagenes/8091455.gif');
+  }
+  .horario-card.hover{
+    color: #07d544;
+    cursor: pointer
+  }
+  
+  .footer {
+    background-color: #ff0000; /* Rojo */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .espacio-horizontal {
+    margin-right: 10px; /* Puedes ajustar el valor según tus necesidades */
+  }

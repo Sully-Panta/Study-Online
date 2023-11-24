@@ -1,0 +1,21 @@
+
+<table mat-table [dataSource]="cursos" class="tabla-personalizada">
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef>Nombre del Curso</th>
+      <td mat-cell *matCellDef="let curso">{{ curso.nombre }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="horario">
+      <th mat-header-cell *matHeaderCellDef>Horario</th>
+      <td mat-cell *matCellDef="let curso">{{ curso.horario }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="dias">
+      <th mat-header-cell *matHeaderCellDef>Días</th>
+      <td mat-cell *matCellDef="let curso">{{ curso.dias.join(', ') }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="['nombre', 'horario', 'dias']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['nombre', 'horario', 'dias'];"></tr>
+  </table>
+  

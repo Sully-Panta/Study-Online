@@ -1,0 +1,5 @@
+<h2>Confirmación de Inscripción</h2>
+<p>¿Está seguro de inscribirse en el curso {{ data.curso.nombre }}?</p>
+<button mat-button (click)="cerrarDialogo(false)">Cancelar</button>
+<button mat-button color="primary" (click)="confirmarInscripcion()">Aceptar</button>
+<div *ngIf="inscripcionExitosa">¡Inscripción exitosa!</div>
