@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <header>
+    <div class="logo" routerLink="/home">FEStudyOnline</div>
+  </header>
+
+  <div>
+    <h2>Iniciar Sesión</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit(loginUsername.value, loginPassword.value)">
+      <div>
+        <label for="loginUsername">Usuario:</label>
+        <input type="text" id="loginUsername" name="loginUsername" formControlName="loginUsername" required #loginUsername>
+      </div>
+      <div>
+        <label for="loginPassword">Contraseña:</label>
+        <input type="password" id="loginPassword" name="loginPassword" formControlName="loginPassword" required #loginPassword>
+      </div>
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+  </div>
+</body>
+
+  
+</html>
