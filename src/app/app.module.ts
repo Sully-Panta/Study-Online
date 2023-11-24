@@ -24,6 +24,8 @@ import { MatTableModule } from '@angular/material/table';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { RegisterComponent } from './register/register.component';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
