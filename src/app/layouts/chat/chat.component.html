@@ -1,0 +1,9 @@
+<div class="container-fluid bg-white p-0">
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="title">Mensaje</div>
+        <textarea class="my-2" placeholder="Your message" formControlName="mensaje"></textarea>
+        <button class="btn btn-sm btn-dark w-100" type="submit">
+            <mat-icon>send</mat-icon>
+        </button>
+    </form>
+</div>

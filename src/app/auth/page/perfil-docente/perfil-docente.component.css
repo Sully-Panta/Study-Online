@@ -1,31 +1,35 @@
 /* perfil.component.css */
 .perfil-container {
-    width: 50%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  .imagen-container {
-    margin-top: 20px;
-  }
-  
-  img {
-    max-width: 100%;
-    max-height: 300px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-.cuerpo{
-    margin-top: 10px;
-    margin-right: 220px;
-    display: flex;
-    justify-content: space-around;
-    
+h2 {
+  color: #333;
+}
+
+.btn:active {
+  transform: scale(1.02);
+}
+
+.imagen-container {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cuerpo {
+  margin-top: 10px;
+  margin-right: 220px;
+  display: flex;
+  justify-content: space-around;
+
 }

@@ -26,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
+import { ChatComponent } from './layouts/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatIconModule } from '@angular/material/icon';
     CursosAlumnoComponent,
     HorarioComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
