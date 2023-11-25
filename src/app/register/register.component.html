@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <header>
+    <div class="logo" routerLink="/home">FEStudyOnline</div>
+  </header>
+
+<div>
+    <h2>Registrarse</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit(newUsername.value, newPassword.value)">
+      <div>
+        <label for="newUsername">Nuevo Usuario:</label>
+        <input type="text" id="newUsername" formControlName="newUsername" required #newUsername>
+      </div>
+      <div>
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input type="password" id="newPassword" formControlName="newPassword" required #newPassword>
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+</body>
+
+</html>

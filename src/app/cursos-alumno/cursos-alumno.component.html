@@ -1,0 +1,27 @@
+<body>
+  <header>
+    <div class="logo" routerLink="/home">FEStudyOnline</div>
+  </header>
+</body>
+
+
+<div class="container">
+    <mat-toolbar color="primary">
+      <span>Cursos Disponibles</span>
+      <span class="espacio-horizontal"> <button mat-button color="primary" (click)="abrirHorario()">Ver Horario</button></span>
+      
+    </mat-toolbar>
+  
+    <div *ngFor="let curso of cursosDisponibles$ | async" class="curso-card" (click)="mostrarConfirmacion(curso)">
+      <mat-card class="mat-card-curso">
+        <mat-card-title>{{ curso.nombre }}</mat-card-title>
+        <mat-card-content>
+          <p>Horario: {{ curso.horario }}</p>
+          <p>Días: {{ curso.dias.join(', ') }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <br>
+    <button mat-button color="primary" (click)="abrirHorario()">Ver Horario</button>
+  </div>
+  
