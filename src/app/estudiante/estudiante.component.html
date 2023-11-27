@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estudiante.component.css">
+    <title>Página de Estudiantes</title>
+</head>
+<body>
+
+     <header>
+        <h1>Bienvenido, <span id="nombreEstudiante">Estudiante</span></h1>
+
+        <!-- Puedes agregar aquí más elementos del encabezado si es necesario -->
+    </header>
+
+
+    <!-- Barra de Navegación -->
+<nav>
+    <ul>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#progreso">Progreso</a></li>
+        <li><a href="#videosRecomendados">Videos Recomendados</a></li>
+        <li><a href="#notas">Notas</a></li>
+        <li><a href="#configuracion">Configuración</a></li>
+        <li><a href="#universitaria">Eventos</a></li>
+        <!-- Puedes agregar más enlaces de navegación según sea necesario -->
+    </ul>
+</nav>
+
+
+
+    <!-- Sección Perfil del Estudiante -->
+<section id="perfil">
+    <h2>Perfil del Estudiante</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Nombre del Estudiante">
+    <button onclick="actualizarNombre()">Actualizar Nombre</button>
+</section>
+
+<!-- Sección Actividades de Programación -->
+<section id="actividades">
+    <h2>Actividades de Programación</h2>
+    <div id="actividadesContainer">
+        <!-- Pregunta 1 -->
+        <div class="actividadProgramacion">
+            <p>1. ¿Cuál de los siguientes es un lenguaje de programación?</p>
+            <ul>
+                <li>
+                    <input type="radio" name="pregunta1" value="A">
+                    <span>A. HTML</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta1" value="B">
+                    <span>B. JPEG</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta1" value="C">
+                    <span>C. CSS</span>
+                </li>
+            </ul>
+            <div id="resultado1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="actividadProgramacion">
+            <p>2. ¿Cuál es el propósito principal de JavaScript?</p>
+            <ul>
+                <li>
+                    <input type="radio" name="pregunta2" value="A">
+                    <span>A. Estilo de presentación en la web.</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta2" value="B">
+                    <span>B. Crear páginas web interactivas.</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta2" value="C">
+                    <span>C. Almacenar datos en bases de datos.</span>
+                </li>
+            </ul>
+            <div id="resultado2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="actividadProgramacion">
+            <p>3. ¿Qué significa CSS en el contexto de programación web?</p>
+            <ul>
+                <li>
+                    <input type="radio" name="pregunta3" value="A">
+                    <span>A. Central Server System</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta3" value="B">
+                    <span>B. Cascading Style Sheets</span>
+                </li>
+                <li>
+                    <input type="radio" name="pregunta3" value="C">
+                    <span>C. Computer Style System</span>
+                </li>
+            </ul>
+            <div id="resultado3"></div>
+        </div>
+    </div>
+
+    <!-- Resultado y botón de verificación -->
+    <div id="resultadoContainer"></div>
+    <button id="verificarBtn" onclick="verificarRespuestas()">Verificar Respuestas</button>
+</section>
+
+
+
+<!-- Sección Videos -->
+<section id="videos">
+    <h2>Videos</h2>
+
+    <!-- Lista de Videos -->
+    <div id="listaVideos">
+        <!-- Video 1 -->
+        <div class="video">
+            <img src="https://i.ytimg.com/an_webp/ooBMdmMJ5Cg/mqdefault_6s.webp?du=3000&sqp=CIDU7aoG&rs=AOn4CLBRQPSgWsaHQrx6GqjNQT4NrxOX9w" alt="Thumbnail Video 1">
+            <h3>Ingeniería de software</div>
+
+        <!-- Video 2 -->
+        <div class="video">
+            <img src="https://i.ytimg.com/an_webp/ht4LFdcZhCw/mqdefault_6s.webp?du=3000&sqp=CJit7aoG&rs=AOn4CLC29yF2WS-Gux3jxnixvnxuO_R22w" alt="Thumbnail Video 2">
+            <h3> Video 2</h3>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video">
+            <img src="https://i.ytimg.com/vi/v8Evfd6AFpw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUTnp7P8mqXdw1BlQEM36pxLuQ2A" alt="Thumbnail Video 3">
+            <h3>Video 3</h3>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video">
+            <img src="https://i.ytimg.com/vi/UYPwVRPBOgM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBA2ONk6kMdbv8BW5fndXwwaXcn0Q" alt="Thumbnail Video 4">
+            <h3> Video 4</h3>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video">
+            <img src="https://i.ytimg.com/vi/Bbu-2NFS-ms/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAacVWyRt33nuI4nT0nxMTIHMEBtw" alt="Thumbnail Video 5">
+            <h3> Video 5</h3>
+        </div>
+    </div>
+
+    <!-- Agregar Video -->
+<div id="agregarVideo">
+    <input type="text" id="urlVideo" placeholder="URL de la Imagen del Video">
+    <button id="enviarVideo">Agregar Video</button>
+</div>
+
+<!-- Lista de Videos -->
+<div id="listaVideos"></div>
+
+
+
+
+
+ <!-- Sección Recursos Educativos -->
+<section id="recursos">
+    <h2>Recursos Educativos para la Carrera de Programación</h2>
+
+    <!-- Lista de Recursos -->
+    <div id="listaRecursos">
+        <!-- Recurso 1 -->
+        <div class="recurso">
+            <h3>Curso de Introducción a la Programación</h3>
+            <p>Domina los conceptos básicos de la programación con este curso introductorio.</p>
+            <a href="https://www.example.com/curso-intro-programacion" target="_blank">Ver curso</a>
+        </div>
+
+        <!-- Recurso 2 -->
+        <div class="recurso">
+            <h3>Guía Práctica de Algoritmos</h3>
+            <p>Aprende a diseñar y analizar algoritmos con esta guía práctica y ejemplos.</p>
+            <a href="https://www.example.com/guia-algoritmos" target="_blank">Acceder a la guía</a>
+        </div>
+
+        <!-- Puedes agregar más recursos según sea necesario -->
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Sección Estadísticas de Progreso -->
+<section id="progreso">
+    <h2>Estadísticas de Progreso</h2>
+
+    <!-- Detalles de Progreso -->
+    <div class="detalle">
+        <div>
+            <h3>Actividades Completadas</h3>
+            <p>30</p>
+        </div>
+        <div>
+            <h3>Actividades Pendientes</h3>
+            <p>20</p>
+        </div>
+        <div>
+            <h3>Promedio de Notas</h3>
+            <p>85%</p>
+        </div>
+    </div>
+
+    <!-- Gráfico de Progreso -->
+    <div class="grafico">
+        <div class="barra">
+            <span></span>
+            <div class="porcentaje">
+                <span>30%</span>
+            </div>
+        </div>
+        <div class="barra">
+            <span style="height: 60%;"></span>
+            <div class="porcentaje">
+                <span>60%</span>
+            </div>
+        </div>
+        <div class="barra">
+            <span style="height: 85%;"></span>
+            <div class="porcentaje">
+                <span>85%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leyenda -->
+    <div class="leyenda">
+        <div class="aprobado">
+            <div></div>
+            <span class="leyenda-text">Actividades Completadas</span>
+        </div>
+        <div class="pendiente">
+            <div></div>
+            <span class="leyenda-text">Actividades Pendientes</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+   <!-- Sección Videos Recomendados -->
+<section id="videosRecomendados">
+    <h2>Videos Recomendados</h2>
+
+    <!-- Lista de Videos -->
+    <div id="listaVideos">
+        <!-- Video 1 -->
+        <div class="video">
+            <div class="enlace" (click)="abrirVideo('video1')"></div>
+            <img src="https://i.ytimg.com/vi/MJkdaVFHrto/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEAvOF_HC1DALk14Wji_0mGsaQWQ" alt="Video 1">
+            <div class="titulo">Introducción</div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video">
+            <div class="enlace" (click)="abrirVideo('video2')"></div>
+            <img src="https://i.ytimg.com/an_webp/w_NWUfuM6PA/mqdefault_6s.webp?du=3000&sqp=CMC17aoG&rs=AOn4CLAgNuRh347tg4Tvu04S0DvSEJ45eQ" alt="Video 2">
+            <div class="titulo">Clase 01</div>
+        </div>
+
+        <!-- Agrega más videos según sea necesario -->
+    </div>
+</section>
+
+
+
+<!-- Sección Notas -->
+<section id="notas">
+    <h2>Notas de Materias</h2>
+
+    <!-- Lista de Notas -->
+    <div id="listaNotas">
+        <!-- Nota 1 -->
+        <div class="nota">
+            <h3>INTELIGENCIA DE NEGOCIOS</h3>
+            <p class="descripcion">La inteligencia de negocios (BI, por sus siglas en inglés) se refiere al uso de herramientas, tecnologías y procesos para analizar datos empresariales y convertirlos en información significativa para la toma de decisiones estratégica. </p>
+            <p>Calificación: <span class="calificacion">90%</span></p>
+
+        </div>
+
+        <!-- Nota 2 -->
+        <div class="nota">
+            <h3>MARCO LEGAL DE LA PROFESIÓN</h3>
+            <p class="descripcion">El marco legal de una profesión se refiere al conjunto de leyes, normativas y regulaciones que rigen la práctica y conducta de los profesionales en ese campo.</p>
+            <p>Calificación: <span class="calificacion">85%</span></p>
+        </div>
+
+        <!-- Nota 3 -->
+        <div class="nota">
+            <h3>DESARROLLO DE APLICACIONES WEB AVANZADO</h3>
+            <p class="descripcion">Desarrollo de aplicaciones web avanzado implica la creación de aplicaciones web complejas y sofisticadas mediante el uso de tecnologías avanzadas.</p>
+            <p>Calificación: <span class="calificacion">92%</span></p>
+        </div>
+
+        <!-- Añadir más notas según sea necesario -->
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sección Universitaria -->
+<section id="universitaria">
+    <h2 class="section-title">Universidad de Ingeniería de Software</h2>
+
+    <!-- Próximos Eventos -->
+    <div class="card-container">
+        <div class="card">
+            <h3>Próximos Eventos</h3>
+            <ul class="event-list">
+                <li>Charla sobre Desarrollo Ágil - 15 de marzo, 2023</li>
+                <li>Hackatón de Programación - 22 de marzo, 2023</li>
+            </ul>
+        </div>
+
+        <!-- Proyectos Colaborativos -->
+        <div class="card">
+            <h3>Proyectos Colaborativos en Curso</h3>
+            <ul class="project-list">
+                <li>Desarrollo de una Aplicación Web Educativa</li>
+                <li>Investigación sobre Tecnologías Emergentes</li>
+            </ul>
+        </div>
+
+        <!-- Noticias Relevantes -->
+        <div class="card">
+            <h3>Noticias Relevantes de la Carrera</h3>
+            <ul class="news-list">
+                <li>Nuevo Laboratorio de Desarrollo de Software en la Universidad</li>
+                <li>Estudiante de Ingeniería de Software Recibe Premio por Proyecto Innovador</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Página de Estudiantes</p>
+    </footer>
+
+    <script src="estudiante.component.js"></script>
+</body>
+</html>
+
+
+
+
