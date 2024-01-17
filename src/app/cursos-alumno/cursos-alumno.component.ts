@@ -18,13 +18,17 @@ import { UserService } from '../services/usuario.service';
 export class CursosAlumnoComponent implements OnInit {
   cursosDisponibles$: Observable<Curso[]> = new Observable<Curso[]>();
   cursosInscritos: Curso[] = [];
+  cursosGet: Curso[] = []
 
-  constructor(private cursosService: CursosService, private dialog: MatDialog, private router: Router,
-    private authenticationService: AuthenticationService, private userService: UserService) {
-      console.log('Curso-alumnoComponent initialized');
-    }
+  constructor(
+    private cursosService: CursosService, 
+    private dialog: MatDialog, 
+    private router: Router,
+    private authenticationService: AuthenticationService, 
+    private userService: UserService) { }
 
   ngOnInit(): void {
+    this.cursos()
     this.cursosService.cargarCursosDisponibles();
     this.cursosDisponibles$ = this.cursosService.cursosDisponibles$;
     this.cursosInscritos = this.cursosService.obtenerCursosInscritos();
@@ -33,6 +37,14 @@ export class CursosAlumnoComponent implements OnInit {
     ).subscribe(() => {
       console.log('Navegación completada. Estado de autenticación:', this.isLoggedIn());
     });
+    console.log(this.cursosGet);
+    
+  }
+
+  private cursos()  {
+    this.cursosService.get().subscribe({
+      next: (data) => this.cursosGet = data.data as Curso[]      
+    })
   }
 
   ngDoCheck() {

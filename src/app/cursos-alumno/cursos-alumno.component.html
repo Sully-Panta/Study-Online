@@ -53,12 +53,15 @@
       
     </mat-toolbar>
   
-    <div *ngFor="let curso of cursosDisponibles$ | async" class="curso-card" (click)="mostrarConfirmacion(curso)">
-      <mat-card class="mat-card-curso">
+
+
+    <div *ngFor="let curso of cursosGet " class="curso-card" (click)="mostrarConfirmacion(curso)">
+      <mat-card class="mat-card-curso shadow-sm" style="margin: 1rem 0; padding: 1rem;">
         <mat-card-title>{{ curso.nombre }}</mat-card-title>
-        <mat-card-content>
-          <p>Horario: {{ curso.horario }}</p>
-          <p>Días: {{ curso.dias.join(', ') }}</p>
+        <hr>
+        <mat-card-content style="background-color: whitesmoke; padding: .5rem; border-radius: 8px;">
+          <p class="text-black"><strong>Horario:</strong> {{ curso.horario }}</p>
+          <p class="text-black"><Strong>Días</Strong> {{ curso.dias }}</p>
         </mat-card-content>
       </mat-card>
     </div>

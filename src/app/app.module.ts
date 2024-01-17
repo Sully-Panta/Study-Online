@@ -12,7 +12,6 @@ import { CursoComponent } from './auth/page/curso/curso.component';
 import { DocenteComponent } from './auth/page/docente/docente.component';
 import { PerfilDocenteComponent } from './auth/page/perfil-docente/perfil-docente.component';
 import { TareaComponent } from './auth/page/tarea/tarea.component';
-import { EstudianteComponent } from './estudiante/estudiante.component';
 import { CursosAlumnoComponent } from './cursos-alumno/cursos-alumno.component';
 import { HorarioComponent } from './horario/horario.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +26,7 @@ import { RegisterComponent } from './register/register.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { ChatComponent } from './layouts/chat/chat.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,6 @@ import { ChatComponent } from './layouts/chat/chat.component';
     DocenteComponent,
     PerfilDocenteComponent,
     TareaComponent,
-    EstudianteComponent,
     CursosAlumnoComponent,
     HorarioComponent,
     LoginComponent,
@@ -59,6 +58,7 @@ import { ChatComponent } from './layouts/chat/chat.component';
     MatTableModule,
     MatSelectModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
