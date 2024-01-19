@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
-  <header>
+  <header class="rounded-2">
     <div class="logo" routerLink="/home">FEStudyOnline</div>
   </header>
 
-  <div>
-    <h2>Iniciar Sesión</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit(loginUsername.value, loginPassword.value)">
-      <div>
-        <label for="loginUsername">Usuario:</label>
-        <input type="text" id="loginUsername" name="loginUsername" formControlName="loginUsername" required #loginUsername>
-      </div>
-      <div>
-        <label for="loginPassword">Contraseña:</label>
-        <input type="password" id="loginPassword" name="loginPassword" formControlName="loginPassword" required #loginPassword>
-      </div>
-      <button type="submit">Iniciar Sesión</button>
-    </form>
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="card shadow-sm p-3 mt-4">
+      <h2>Iniciar Sesión</h2>
+      <hr class=" m-0">
+      <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <div>
+          <label for="loginUsername" class="small">Usuario:</label>
+          <input type="text" class="rounded-2" autocomplete="off" id="loginUsername" name="loginUsername" formControlName="loginUsername" required
+          #loginUsername>
+        </div>
+        <div>
+          <label for="loginPassword" class="small mt-3">Contraseña:</label>
+          <input type="password" class="rounded-2" id="loginPassword" name="loginPassword" formControlName="loginPassword" required
+          #loginPassword>
+        </div>
+        <button type="submit" class="mt-4 btn bg-success rounded-2 btn-sm w-100">Iniciar Sesión</button>
+      </form>
+    </div>
   </div>
 </body>
 
-  
 </html>

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
-  <header>
+  <header class="rounded-2">
     <div class="logo" routerLink="/home">FEStudyOnline</div>
   </header>
 
-<div>
-    <h2>Registrarse</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit(newUsername.value, newPassword.value)">
-      <div>
-        <label for="newUsername">Nuevo Usuario:</label>
-        <input type="text" id="newUsername" formControlName="newUsername" required #newUsername>
-      </div>
-      <div>
-        <label for="newPassword">Nueva Contraseña:</label>
-        <input type="password" id="newPassword" formControlName="newPassword" required #newPassword>
-      </div>
-      <button type="submit">Registrarse</button>
-    </form>
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="card shadow-sm p-3 mt-4">
+      <h2>Iniciar Sesión</h2>
+      <hr class=" m-0">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+        <div>
+          <label for="registerUsername" class="small">Registrar Usuario:</label>
+          <input type="text" class="rounded-2" autocomplete="off" id="registerUsername" name="registerUsername" formControlName="registerUsername" required
+          #registerUsername>
+        </div>
+        <div>
+          <label for="registerPassword" class="small mt-3">Contraseña:</label>
+          <input type="password" class="rounded-2" id="registerPassword" name="registerPassword" formControlName="registerPassword" required
+          #registerPassword>
+        </div>
+        <button type="submit" class="mt-4 btn bg-success rounded-2 btn-sm w-100">Registrar</button>
+      </form>
+    </div>
   </div>
 </body>
 

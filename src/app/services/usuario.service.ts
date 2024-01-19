@@ -1,6 +1,11 @@
 // user.service.ts
 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Credenciales } from '../interfaces/credenciales';
+import { Observable } from 'rxjs';
+import { Respuesta } from '../interfaces/respuesta';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +13,15 @@ import { Injectable } from '@angular/core';
 export class UserService {
   private usersKey = 'registeredUsers';
   private currentUserKey = 'currentUser';
-  
+
+  private myAppUrl: string = environment.endpoint
+  private myApiUrl: string = 'api/Usuarios/'
+
+  constructor(private http: HttpClient) { }
+
+  post(user: Credenciales): Observable<Respuesta>{
+    return this.http.post<Respuesta>(`${this.myAppUrl}${this.myApiUrl}`, user);
+  }
 
   registerUser(username: string, password: string): boolean {
     // Obtén la lista actual de usuarios registrados o inicializa una lista vacía
